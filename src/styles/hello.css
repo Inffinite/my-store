@@ -33,6 +33,26 @@
         display: none;
     }
 
+    .account {
+        display: none;
+    }
+
+    .name {
+        color: #1d9bf0;
+        font-family: 'sfb';
+        font-size: 20px;
+    }
+
+    .front {
+        color: #42516d;
+        font-family: 'sfb';
+        font-size: 20px;
+    }
+
+    .menu-tab {
+        display: none;
+    }
+
     .actions {
         display: block;
     }
@@ -46,7 +66,7 @@
         top: 0;
         left: 0;
         right: 0;
-        padding: 15px 20px 15px 20px;
+        padding: 20px 20px 20px 20px;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -303,7 +323,7 @@
         top: 0;
         left: 0;
         right: 0;
-        padding: 30px 60px 30px 60px;
+        padding: 30px 74px 30px 74px;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -338,13 +358,12 @@
     }
 
     .logo {
-        height: 26px;
+        height: 46px;
         fill: #1d9bf0;
     }
 
     .menu {
-        fill: #42516d;
-        height: 24px;
+        display: none;
     }
 
     .content-title-wr {
@@ -381,7 +400,7 @@
         font-family: 'coco';
         font-size: 40px;
         /* color: #1d9bf0; */
-        color: #63728d;
+        color: #42516d;
     }
 
     .h-subtitle {
@@ -427,11 +446,11 @@
         margin-top: 40px;
         background-color: #1d9bf0;
         color: white;
-        padding: 10px 30px 10px 30px;
+        padding: 15px 30px 15px 30px;
         font-family: 'sfb';
         font-size: 16px;
         border: none;
-        border-radius: 20px;
+        border-radius: 12px;
     }
 
     .aboutus {
@@ -440,7 +459,7 @@
         background-color: transparent;
         color: #1d9bf0;
         padding: 10px 30px 10px 30px;
-        font-family: 'sfb';
+        font-family: 'sfr';
         font-size: 18px;
         border: none;
         border-radius: 20px;
@@ -471,7 +490,7 @@
         justify-content: flex-start;
         align-items: center;
         gap: 20px;
-        margin-bottom: 70px;
+        margin-bottom: 90px;
     }
 
     .task-icon-container {
@@ -555,6 +574,8 @@
     }
 
     .drawer {
+        justify-content: center;
+        align-items: center;
         transform: translate(0px, 50px);
         opacity: 0;
         display: none;
@@ -568,7 +589,7 @@
         border-radius: 22px;
         z-index: 500;
         background-color: #1d9bf0;
-        padding: 20px 60px 20px 20px;
+        padding: 20px 40px 5px 40px;
         --tw-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
         box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
     }
@@ -595,11 +616,16 @@
         justify-content:flex-start;
         align-items: center;
         margin-bottom: 25px;
-        gap: 20px;
+        gap: 10px;
         color: #f6fbff;
         font-family: 'sfb';
         font-size: 20px;
+        /* width: 100%; */
         cursor: pointer;
+    }
+
+    .d-item:hover .d-container {
+        background-color: #80c5fd11;
     }
 
     .d-subtitle {
@@ -616,11 +642,68 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        transition: 0.5s ease;
     }
 
     .d-icon {
         fill: #f6fbff;
         /* fill: #92ceff; */
         height: 20px;
+    }
+
+    .account {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 55px;
+    }
+
+    .login {
+        background-color: #1d9bf0;
+        border: none;
+        outline: none;
+        font-family: 'sfb';
+        color: white;
+        font-size: 16px;
+        padding: 10px 20px 10px 20px;
+        border-radius: 8px;
+        cursor: pointer;
+    }
+
+    .register {
+        border: none;
+        outline: none;
+        font-family: 'sfb';
+        color: #42516d;
+        font-size: 16px;
+        padding: 10px 20px 10px 20px;
+        border-radius: 8px;
+        background-color: #ebf0f3;
+        cursor: pointer;
+    }
+
+    .menu-tab {
+        color: #546380;
+        font-size: 16px;
+        font-family: 'sfr';
+        transition: 0.5s ease;
+        display: block;
+    }
+
+    .menu-tab:hover {
+        color: #1d9bf0;
+        cursor: pointer;
+    }
+
+    .name {
+        color: #1d9bf0;
+        font-family: 'sfb';
+        font-size: 24px;
+    }
+
+    .front {
+        color: #42516d;
+        font-family: 'sfb';
+        font-size: 24px;
     }
 }

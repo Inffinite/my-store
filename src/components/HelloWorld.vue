@@ -4,7 +4,8 @@
     </div>
 
     <div class="drawer">
-      <div class="d-title">
+      <div>
+        <div class="d-title">
         <svg class="arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 0 1 0-1.414L10.586 10 7.293 6.707a1 1 0 0 1 1.414-1.414l4 4a1 1 0 0 1 0 1.414l-4 4a1 1 0 0 1-1.414 0z" clip-rule="evenodd"/></svg>
         Menu
       </div>
@@ -44,12 +45,36 @@
           </div>
         </div>
       </div>
+      </div>
     </div>
 
     <div class="h-header">
+      <div class="name">
+        store<span class="front">front</span>
+      </div>
       <svg @click="menuState" class="menu" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M3 5a1 1 0 0 1 1-1h12a1 1 0 1 1 0 2H4a1 1 0 0 1-1-1zm0 5a1 1 0 0 1 1-1h12a1 1 0 1 1 0 2H4a1 1 0 0 1-1-1zm0 5a1 1 0 0 1 1-1h6a1 1 0 1 1 0 2H4a1 1 0 0 1-1-1z" clip-rule="evenodd"/></svg>
-      <svg class="logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" xml:space="preserve"><path d="M6.429 9.847a4.47 4.47 0 0 1 7.573-2.012 4.186 4.186 0 0 1 1.136-.21v-.13c0-2.482-1.845-4.495-4.12-4.495-1.626 0-3.02 1.038-3.69 2.531a3.01 3.01 0 0 0-1.694-.535c-1.785 0-3.231 1.577-3.231 3.523 0 .21.024.414.057.613-1.377.136-2.455 1.544-2.455 3.08 0 .016.004.029.004.045-.001.014-.009.028-.009.042 0 .615.214 1.177.561 1.631A2.638 2.638 0 0 0 2.701 15h1.261a3.574 3.574 0 0 1-.398-1.615 3.62 3.62 0 0 1 2.865-3.538zm11.46 1.93c-.025 0-.05.007-.075.008.007-.074.022-.146.022-.222a2.664 2.664 0 0 0-2.665-2.664 2.64 2.64 0 0 0-1.564.516 3.22 3.22 0 0 0-2.838-1.712 3.237 3.237 0 0 0-3.237 3.237c0 .023.006.043.007.066a2.36 2.36 0 0 0-.359-.036 2.414 2.414 0 0 0-2.366 2.902A2.612 2.612 0 0 0 7.38 16h10.706v-.019a2.106 2.106 0 0 0-.197-4.204z"/></svg>
-      <svg class="menu" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M8 4a4 4 0 1 0 0 8 4 4 0 0 0 0-8zM2 8a6 6 0 1 1 10.89 3.476l4.817 4.817a1 1 0 0 1-1.414 1.414l-4.816-4.816A6 6 0 0 1 2 8z" clip-rule="evenodd"/></svg>
+      <!-- <svg class="logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" xml:space="preserve"><path d="M6.429 9.847a4.47 4.47 0 0 1 7.573-2.012 4.186 4.186 0 0 1 1.136-.21v-.13c0-2.482-1.845-4.495-4.12-4.495-1.626 0-3.02 1.038-3.69 2.531a3.01 3.01 0 0 0-1.694-.535c-1.785 0-3.231 1.577-3.231 3.523 0 .21.024.414.057.613-1.377.136-2.455 1.544-2.455 3.08 0 .016.004.029.004.045-.001.014-.009.028-.009.042 0 .615.214 1.177.561 1.631A2.638 2.638 0 0 0 2.701 15h1.261a3.574 3.574 0 0 1-.398-1.615 3.62 3.62 0 0 1 2.865-3.538zm11.46 1.93c-.025 0-.05.007-.075.008.007-.074.022-.146.022-.222a2.664 2.664 0 0 0-2.665-2.664 2.64 2.64 0 0 0-1.564.516 3.22 3.22 0 0 0-2.838-1.712 3.237 3.237 0 0 0-3.237 3.237c0 .023.006.043.007.066a2.36 2.36 0 0 0-.359-.036 2.414 2.414 0 0 0-2.366 2.902A2.612 2.612 0 0 0 7.38 16h10.706v-.019a2.106 2.106 0 0 0-.197-4.204z"/></svg> -->
+      <!-- <svg class="menu" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M8 4a4 4 0 1 0 0 8 4 4 0 0 0 0-8zM2 8a6 6 0 1 1 10.89 3.476l4.817 4.817a1 1 0 0 1-1.414 1.414l-4.816-4.816A6 6 0 0 1 2 8z" clip-rule="evenodd"/></svg> -->
+      
+      <!-- <svg class="menu" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path d="M3 1a1 1 0 0 0 0 2h1.22l.305 1.222a.997.997 0 0 0 .01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 0 0 0-2H6.414l1-1H14a1 1 0 0 0 .894-.553l3-6A1 1 0 0 0 17 3H6.28l-.31-1.243A1 1 0 0 0 5 1H3zm13 15.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zM6.5 18a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"/></svg> -->
+      <div class="account">
+        <!-- <button class="login">
+          Login
+        </button>
+        <button class="register">
+          Register
+        </button> -->
+
+        <div class="menu-tab">
+          Catalog
+        </div>
+        <div class="menu-tab">
+          About
+        </div>
+        <div class="menu-tab">
+          Contacts
+        </div>
+      </div>
     </div>
 
     <div class="content-wr">
@@ -213,7 +238,7 @@ export default {
           });
           gsap.to(".drawer", {
             ease: "power3.easeOut",
-            display: "block",
+            display: "flex",
             opacity: 1,
             y: 0,
             duration: 0.5,
