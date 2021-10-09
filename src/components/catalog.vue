@@ -1,8 +1,7 @@
 <template>
-  <div class="hello">
+  <div class="catalog">
     <div @click="menuState" class="drawer-wr">
     </div>
-
     <div class="drawer">
       <div>
         <div class="d-title">
@@ -59,7 +58,6 @@
       </div>
       </div>
     </div>
-
     <div class="contact-wr">
       <div class="contactt">
         <div>
@@ -121,7 +119,6 @@
         </div>
       </div>
     </div>
-
     <div class="h-header">
       <div class="name">
         store<span class="front">front</span>
@@ -153,169 +150,26 @@
       </div>
     </div>
 
-    <div class="content-wr">
-      <div class="content">
-        <div class="content-title-wr">
-          <div class="h-title">
-          All your needs <br>
-          <div class="title-small">in one <span>place</span></div>
-          </div>
-
-          <div class="h-subtitle">
-            Browse our stock to find what you are 
-            looking for.
-          </div>
-
-          <div class="actions">
-            <button @click="catalog" class="order">
-              Explore catalog
-            </button>
-            <button class="aboutus">
-              About us
-              <svg class="about-us-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M12.293 5.293a1 1 0 0 1 1.414 0l4 4a1 1 0 0 1 0 1.414l-4 4a1 1 0 0 1-1.414-1.414L14.586 11H3a1 1 0 1 1 0-2h11.586l-2.293-2.293a1 1 0 0 1 0-1.414z" clip-rule="evenodd"/></svg>
-            </button>
+    <div class="stock-wr">
+      <div v-for="(stock, i) in stocks" :key="i" class="stock-item">
+        <div class="item-t">
+          {{ stock.name }}
+          <div class="cost">
+            KES {{ stock.price }}
           </div>
         </div>
-      </div>
-
-      <div class="h-pic-wr">
-        <img class="h-pic" src="../assets/ad.png">
-      </div>
-    </div>
-
-    <div class="store-f-wr">
-      <div class="store-f">
-        <svg class="quote" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" xml:space="preserve"><path d="M5.315 3.401c-1.61 0-2.916 1.343-2.916 3 0 1.656 1.306 3 2.916 3 2.915 0 .972 5.799-2.916 5.799v1.4c6.939.001 9.658-13.199 2.916-13.199zm8.4 0c-1.609 0-2.915 1.343-2.915 3 0 1.656 1.306 3 2.915 3 2.916 0 .973 5.799-2.915 5.799v1.4c6.938.001 9.657-13.199 2.915-13.199z"/></svg>
-        <div>
-          A new kind of <span class="blue">store front</span>
+        <img :src="stock.img" class="pic">
+        <div class="i-desc">
+          {{ stock.desc }}
+        </div>
+        <div class="orderr">
+          Order
+        </div>
+        <div class="specs">
+          View specs
         </div>
       </div>
     </div>
-
-    <div class="tasks-title-wr">
-      <div class="tasks-title">
-        We deal with
-      </div>
-    </div>
-
-    <div class="tasks-wrapper">
-      <div class="task-item">
-        <div style="display: flex; justify-content: center;">
-          <div class="task-icon-container">
-            <svg class="task-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M3 5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2h-2.22l.123.489.804.804A1 1 0 0 1 13 18H7a1 1 0 0 1-.707-1.707l.804-.804L7.22 15H5a2 2 0 0 1-2-2V5zm5.771 7H5V5h10v7H8.771z" clip-rule="evenodd"/></svg>
-          </div>
-        </div>
-        <div class="task-details">
-          <div class="task-title">
-            Electronics
-          </div>
-          <div class="task-subtitle">
-            Shop for electronic gadgets
-          </div>
-          <div class="tasks-btn-wr">
-            <button class="task-btn">
-              See more
-            </button>
-          </div>
-        </div>
-      </div>
-
-      <div class="task-item">
-        <div style="display: flex; justify-content: center;">
-          <div class="task-icon-container">
-            <svg class="task-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M6 2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H6zm1 2a1 1 0 0 0 0 2h6a1 1 0 1 0 0-2H7zm6 7a1 1 0 0 1 1 1v3a1 1 0 1 1-2 0v-3a1 1 0 0 1 1-1zm-3 3a1 1 0 1 0 0 2h.01a1 1 0 1 0 0-2H10zm-4 1a1 1 0 0 1 1-1h.01a1 1 0 1 1 0 2H7a1 1 0 0 1-1-1zm1-4a1 1 0 1 0 0 2h.01a1 1 0 1 0 0-2H7zm2 1a1 1 0 0 1 1-1h.01a1 1 0 1 1 0 2H10a1 1 0 0 1-1-1zm4-4a1 1 0 1 0 0 2h.01a1 1 0 1 0 0-2H13zM9 9a1 1 0 0 1 1-1h.01a1 1 0 1 1 0 2H10a1 1 0 0 1-1-1zM7 8a1 1 0 0 0 0 2h.01a1 1 0 0 0 0-2H7z" clip-rule="evenodd"/></svg>
-          </div>
-        </div>
-        <div class="task-details">
-          <div class="task-title">
-            Appliances
-          </div>
-          <div class="task-subtitle">
-            Home appliances for you
-          </div>
-          <div class="tasks-btn-wr">
-            <button class="task-btn">
-              See more
-            </button>
-          </div>
-        </div>
-      </div>
-
-      <div class="task-item">
-        <div style="display: flex; justify-content: center;"> 
-          <div class="task-icon-container">
-            <svg class="task-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M18 10a8 8 0 1 1-16 0 8 8 0 0 1 16 0zm-2 0c0 .993-.241 1.929-.668 2.754l-1.524-1.525a3.997 3.997 0 0 0 .078-2.183l1.562-1.562C15.802 8.249 16 9.1 16 10zm-5.165 3.913 1.58 1.58A5.98 5.98 0 0 1 10 16a5.976 5.976 0 0 1-2.516-.552l1.562-1.562a4.006 4.006 0 0 0 1.789.027zm-4.677-2.796a4.002 4.002 0 0 1-.041-2.08l-.08.08-1.53-1.533A5.98 5.98 0 0 0 4 10c0 .954.223 1.856.619 2.657l1.54-1.54zm1.088-6.45A5.974 5.974 0 0 1 10 4c.954 0 1.856.223 2.657.619l-1.54 1.54a4.002 4.002 0 0 0-2.346.033L7.246 4.668zM12 10a2 2 0 1 1-4 0 2 2 0 0 1 4 0z" clip-rule="evenodd"/></svg>
-          </div>
-        </div>
-        <div class="task-details">
-          <div class="task-title">
-            Gym Equipment
-          </div>
-          <div class="task-subtitle">
-            Enhance you workout sessions
-          </div>
-          <div class="tasks-btn-wr">
-            <button class="task-btn">
-              See more
-            </button>
-          </div>
-        </div>
-      </div>
-
-      <div class="task-item">
-        <div style="display: flex; justify-content: center;">
-          <div class="task-icon-container">
-            <svg class="task-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M17.707 9.293a1 1 0 0 1 0 1.414l-7 7a1 1 0 0 1-1.414 0l-7-7A.997.997 0 0 1 2 10V5a3 3 0 0 1 3-3h5c.256 0 .512.098.707.293l7 7zM5 6a1 1 0 1 0 0-2 1 1 0 0 0 0 2z" clip-rule="evenodd"/></svg>
-          </div>
-        </div>
-        <div class="task-details">
-          <div class="task-title">
-            Toys
-          </div>
-          <div class="task-subtitle">
-            For fun filled playdates
-          </div>
-          <div class="tasks-btn-wr">
-            <button class="task-btn">
-              See more
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-
-  <div class="btn-wr">
-    <div class="contact-card">
-      <!-- <div>
-        <div style="display: flex; justify-content: center;">
-          <button class="talk-btn">
-            Talk to us
-          </button>
-        </div>
-
-        <button class="learn">
-          Learn more
-        </button>
-      </div> -->
-
-      <div class="n-title">
-        Email Newsletter
-      </div>
-
-      <div class="n-subtitle">
-        Subscribe to get regular email updates
-      </div>
-
-      <div style="display: flex; justify-content: center;">
-        <div class="news">
-          <input placeholder="someone@gmail.com" type="text" class="newsletter">
-          <div class="send-btn">
-            <svg class="send-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" style="enable-background:new 0 0 20 20" xml:space="preserve"><path d="M18.64 2.634.984 8.856c-.284.1-.347.345-.01.479l3.796 1.521 2.25.901 10.984-8.066c.148-.108.318.095.211.211l-7.871 8.513v.002l-.452.503.599.322 4.982 2.682c.291.156.668.027.752-.334l2.906-12.525c.079-.343-.148-.552-.491-.431zM7 17.162c0 .246.139.315.331.141.251-.229 2.85-2.561 2.85-2.561L7 13.098v4.064z"/></svg>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
   </div>
 </template>
 
@@ -324,31 +178,38 @@ import gsap from 'gsap'
 // import Drawer from './drawer.vue'
 
 export default {
-  name: 'HelloWorld',
   components: {
     // Drawer
   },
   data(){
     return {
       contactMenu: false,
-      aboutMenu: false,
       menu: false,
-      tasks: [
+      aboutMenu: false,
+      stocks: [
         {
-          name: 'Electronics',
-          info: 'Shop for electronic gadgets'
+          name: "Plasma screen",
+          price: "22k",
+          img: 'https://images.unsplash.com/photo-1593784991095-a205069470b6?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8dHZ8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60',
+          desc: 'Android Television with plasma screen'
         },
         {
-          name: 'Appliances',
-          info: 'Shop for electronic gadgets'
+          name: "Gaming CPU",
+          price: "79k",
+          img: 'https://images.unsplash.com/photo-1551033541-2075d8363c66?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTh8fGNwdXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60',
+          desc: 'Gaming computer'
         },
         {
-          name: 'Gym Equipment',
-          info: 'Shop for electronic gadgets'
+          name: "Dumbell and strap",
+          price: "22k",
+          img: 'https://images.unsplash.com/photo-1584735935682-2f2b69dff9d2?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8d2VpZ2h0c3xlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60',
+          desc: 'A pair of dumbells and accompanying strap'
         },
         {
-          name: 'Utilities',
-          info: 'Shop for electronic gadgets'
+          name: "Plasma screen",
+          price: "22k",
+          img: 'https://images.unsplash.com/photo-1593784991095-a205069470b6?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8dHZ8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60',
+          desc: 'Android Television with plasma screen'
         },
       ]
     }
@@ -494,5 +355,6 @@ export default {
 </script>
 
 <style>
+@import '../styles/catalog.css';
 @import '../styles/hello.css';
 </style>

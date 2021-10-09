@@ -1,0 +1,30 @@
+@font-face {
+    font-family: "coco";
+    src: url('../../fonts/Coco-Gothic-Bold-trial.woff');
+}
+
+@font-face {
+    font-family: "sfb";
+    src: url('../../fonts/SFProText-Bold.woff');
+}
+
+@font-face {
+    font-family: "sfr";
+    src: url('../../fonts/SFProText-Regular.woff');
+}
+
+@media only screen {
+    .catalog {
+        background-color: #f4f6fa;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        overflow-y: scroll;
+    }
+}
+
+@media only screen and (min-width: 64.063em) {
+
+}
